@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    {block name="meta"}{include file="public/meta" /}{/block}
+    {block name="style"}{/block}
+    <title>{block name="title"}{$systemName}{/block}</title>
+</head>
+<body>
+<!--_header 作为公共模版分离出去-->
+{block name="header"}{include file="public/header" /}{/block}
+<!--/_header 作为公共模版分离出去-->
+<!--_menu 作为公共模版分离出去-->
+{block name="menu"}{include file="public/menu" /}{/block}
+<!--/_menu 作为公共模版分离出去-->
+<!--section模块-->
+{block name="section"}section{/block}
+<!--/section模块-->
+<!--javascript 作为公共模版分离出去-->
+{block name="javascript"}{include file="public/javascript" /}{/block}
+<!--/javascript /作为公共模版分离出去-->
+</body>
+</html>

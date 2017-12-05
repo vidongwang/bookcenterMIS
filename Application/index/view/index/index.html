@@ -1,0 +1,82 @@
+﻿{include file="public/start" /}
+<style>
+    div .thumbnail {
+        cursor: pointer;
+    }
+</style>
+<body>
+
+
+<!-- 包含头部模版header-->
+{include file="public/header" /}
+
+<div class="container body-content">
+
+    <div class="jumbotron">
+        <h1>欢迎使用购书中心管理信息系统！</h1>
+        <p class="lead">全国领先的综合性网上购书中心。超过1万种书籍在线热销！购书中心将为您提供最新的书籍信息，提供完善的购书服务。</p>
+        <p><a href="" class="btn btn-primary btn-lg">查看更多 &raquo;</a></p>
+    </div>
+
+    <div id="top4" class="row">
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="100%x200" src="http://img3m2.ddimg.cn/95/23/25169162-1_l_13.jpg" data-holder-rendered="true" style="height: 150px; width: 150px; display: block;">
+                <div class="caption">
+                    <h3>愿所有相遇，都恰逢其时</h3>
+                    <p>（随书附赠：精美书签。一切都是*好的安排，结束的，已然结束；相逢的，终将遇见，不早不晚。41篇暖意萦怀的生活感悟，让你不畏将来，不念过去，在忙乱的世界中守住内心的安定和富足）</p>
+                    <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="100%x200" src="http://img3m7.ddimg.cn/40/25/25175047-1_l_11.jpg" data-holder-rendered="true" style="height: 150px; width: 150px; display: block;">
+                <div class="caption">
+                    <h3>爆款文案（前奥美金牌广告人力作）</h3>
+                    <p>11月30日前下单赠电子书（30日统一派送）。本书教你解构文案打动人的4大黄金法则，公开18种文案写法，75篇实战案例，100多幅释义插图，手把手教你写出爆款销售力。团购：010-57993149。</p>
+                    <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="100%x200" src="http://img3m1.ddimg.cn/59/32/25182491-1_l_6.jpg" data-holder-rendered="true" style="height: 150px; width: 150px; display: block;">
+                <div class="caption">
+                    <h3>失乐园</h3>
+                    <p>渡边淳一代表作，长期雄踞日本畅销书排行榜榜首，由黑木瞳、役所广司主演的电影引发“失乐园”热。此次的全新林少华译本，将带你体味不一样的渡边淳一，不一样的失乐园。渡边淳一代表作，长期雄踞日本畅销书排行榜榜首</p>
+                    <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="100%x200" src="http://img3m2.ddimg.cn/70/6/25182502-1_l_3.jpg" data-holder-rendered="true" style="height: 150px; width: 150px; display: block;">
+                <div class="caption">
+                    <h3>练级 : 自我进化的十项修炼</h3>
+                    <p>领英专栏作家，知识大V菜刀少爷带你打怪升级。我们只是在舒适区,一遍遍重复着自己的习惯动作,却没有进入不舒服的状态,挑战技术盲区。实践本书讲述练级的十项修炼，你就具备了在任何领域成为高手的可能。</p>
+                    <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="new4" class="row" style="margin-top:20px;">
+        {foreach $list as $vo}
+            <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <img data-src="holder.js/100%x200" alt="100%x200" src="{$vo.remark}" data-holder-rendered="true" style="height: 150px; width: 150px; display: block;">
+                <div class="caption">
+                    <h3>{$vo.bookname}</h3>
+                    <p>{$vo.abstract}</p>
+                    <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-default" role="button">加入购物车</a></p>
+                </div>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+    <!-- 包含头部模版footer-->
+    {include file="public/footer" /}
+</div>
+</body>
+</html>
